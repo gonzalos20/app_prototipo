@@ -26,10 +26,10 @@ function loadBody(file, onLoaded) {
 
 // Apply the authentication middleware for all routes except '/login'
 page('*', (ctx, next) => {
+  console.log('Current path:', ctx.pathname);
   if (ctx.pathname !== URL_SITE+'/' && !isLoggedIn()) {
     page.redirect(URL_SITE+'/');  // Redirect to login if not logged in
   } else {
-    console.log('User is logged in or accessing the login page. Proceeding...');
     next();  // Allow the route to proceed if logged in or it's the login page
   }
 });
