@@ -36,7 +36,7 @@ page('*', (ctx, next) => {
 // Define routes
 page(URL_SITE+'/', () => {
   if (isLoggedIn()) {
-    loadBody('./pages/home.html');  // Load home.html's body content
+    loadBody('./pages/home.html', renderFormEntries);  // Load home.html's body content
   }
   else {
     loadBody('./pages/login.html');  // Load login.html's body content
