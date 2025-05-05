@@ -36,15 +36,15 @@ page('*', (ctx, next) => {
 // Define routes
 page(URL_SITE+'/', () => {
   if (isLoggedIn()) {
-    loadBody(URL_SITE+'/pages/home.html', renderFormEntries);  // Load home.html's body content
+    loadBody('./pages/home.html', renderFormEntries);  // Load home.html's body content
   }
   else {
-    loadBody(URL_SITE+'/pages/login.html');  // Load login.html's body content
+    loadBody('./pages/login.html');  // Load login.html's body content
   }
 });
 
 page(''+URL_SITE+'/alta', () => {
-  loadBody(URL_SITE+'/pages/alta.html');  // Load alta.html's body content
+  loadBody('./pages/alta.html');  // Load alta.html's body content
 });
 
 // Start routing
