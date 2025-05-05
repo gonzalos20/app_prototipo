@@ -36,6 +36,7 @@ page('*', (ctx, next) => {
 
 // Define routes
 page(URL_SITE+'/', () => {
+  console.log('Loading home page...');
   if (isLoggedIn()) {
     loadBody('./pages/home.html', renderFormEntries);  // Load home.html's body content
   }
