@@ -1,6 +1,6 @@
 // router.js
 //import page from './node_modules/page/page.mjs';
-const URL_SITE = '/app_prototipo'
+const URL_SITE = 'https://gonzalos20.github.io/app_prototipo'
 
 // Function to load only the body from the external HTML file
 function loadBody(file, onLoaded) {
@@ -34,7 +34,7 @@ page('*', (ctx, next) => {
 });
 
 // Define routes
-page(''+URL_SITE+'/', () => {
+page(URL_SITE+'/', () => {
   if (isLoggedIn()) {
     loadBody('.'+URL_SITE+'/pages/home.html', renderFormEntries);  // Load home.html's body content
   }
