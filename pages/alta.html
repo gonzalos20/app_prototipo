@@ -1,0 +1,80 @@
+<div>
+  <div class="navbar bg-base-100 shadow-sm">
+    <div class="navbar-start">
+      <div class="drawer">
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+          <!-- Page content here -->
+          <label for="my-drawer" class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg>
+          </label>
+        </div>
+        <div class="drawer-side">
+          <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+          <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+            <!-- Sidebar content here -->
+            <li class="mb-4">
+          <div class="flex items-center space-x-4">
+            <div>
+              <p class="font-bold">Hola, John Doe!</p>
+            </div>
+          </div>
+            </li>
+            <li><a>Mi Perfil</a></li>
+            <li>
+                <button class="btn btn-error w-full" onclick="logout()">Logout</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-center">
+      <a class="btn btn-ghost text-xl">iWorkFlow</a>
+    </div>
+    <div class="navbar-end">
+    </div>
+  </div>
+  <div class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <div class="mb-4">
+      <a href="/" class="btn btn-secundario">< Volver</a>
+    </div>
+    <h1 class="text-2xl font-bold mb-4">Alta</h1>
+
+    <form id="myForm" class="space-y-4" onsubmit="handleFormSubmit(event)">
+      <!-- Searchable List -->
+      <div>
+        <label class="label">Choose an option</label>
+        <select id="selectList" class="select select-bordered w-full">
+          <option value="Option A">Option A</option>
+          <option value="Option B">Option B</option>
+          <option value="Option C">Option C</option>
+        </select>
+      </div>
+
+      <!-- Text Input -->
+      <div>
+        <label class="label">Text</label>
+        <input type="text" id="textInput" class="input input-bordered w-full" required>
+      </div>
+
+      <!-- Image Upload -->
+      <div>
+        <label class="label">Upload Image</label>
+        <input type="file" accept="image/*" id="imageInput" class="file-input file-input-bordered w-full" required>
+        <img id="previewImage" class="mt-2 w-32 h-32 object-cover rounded hidden" />
+      </div>
+
+      <!-- Date Picker -->
+      <div>
+        <label class="label">Date</label>
+        <input type="date" id="dateInput" class="input input-bordered w-full" required>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-right">
+        <button type="submit" class="btn btn-primario w-full">Save</button>
+      </div>
+    </form>
+  </div>
+ 
+</div>

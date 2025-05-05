@@ -1,6 +1,7 @@
-const CACHE_NAME = 'note-app-cache-v1';
-const urlsToCache = ['/pwapp/', '/pwapp/index.html', '/pwapp/styles.css', '/pwapp/app.js', '/pwapp/manifest.json',   '/pwapp/icons/icon-192.png',
-  '/pwapp/icons/icon-512.png'];
+const CACHE_NAME = 'iWorkflow-v1';
+const APP_NAME = 'app_prototipo'
+const urlsToCache = ['/'+APP_NAME+'/', '/'+APP_NAME+'/index.html', '/'+APP_NAME+'/styles.css', '/'+APP_NAME+'/app.js', '/'+APP_NAME+'/manifest.json',   '/'+APP_NAME+'/icons/icon-192.png',
+  '/'+APP_NAME+'/icons/icon-512.png', 'https://cdn.jsdelivr.net/npm/daisyui@5', 'https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4', '/'+APP_NAME+'/router.js'];
 
   self.addEventListener('install', (event) => {
     event.waitUntil(
