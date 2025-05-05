@@ -1,6 +1,6 @@
 // router.js
 //import page from './node_modules/page/page.mjs';
-const URL_SITE = '/app_prototipo/'
+const URL_SITE = '/app_prototipo'
 
 // Function to load only the body from the external HTML file
 function loadBody(file, onLoaded) {
@@ -27,7 +27,7 @@ function loadBody(file, onLoaded) {
 // Apply the authentication middleware for all routes except '/login'
 page('*', (ctx, next) => {
   if (ctx.pathname !== '/' && !isLoggedIn()) {
-    page.redirect('/');  // Redirect to login if not logged in
+    page.redirect(URL_SITE+'/');  // Redirect to login if not logged in
   } else {
     next();  // Allow the route to proceed if logged in or it's the login page
   }
