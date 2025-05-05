@@ -4,7 +4,6 @@ const URL_SITE = 'https://gonzalos20.github.io/app_prototipo'
 
 // Function to load only the body from the external HTML file
 function loadBody(file, onLoaded) {
-  console.log('Loading body from:', file);
   return fetch(file)
     .then(response => response.text())
     .then(html => {
@@ -30,13 +29,13 @@ page('*', (ctx, next) => {
   if (ctx.pathname !== URL_SITE+'/' && !isLoggedIn()) {
     page.redirect(URL_SITE+'/');  // Redirect to login if not logged in
   } else {
+    console.log('User is logged in or accessing the login page. Proceeding...');
     next();  // Allow the route to proceed if logged in or it's the login page
   }
 });
 
 // Define routes
 page(URL_SITE+'/', () => {
-  console.log('Loading home page...');
   if (isLoggedIn()) {
     loadBody('./pages/home.html', renderFormEntries);  // Load home.html's body content
   }
