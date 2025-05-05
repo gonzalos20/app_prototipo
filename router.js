@@ -1,5 +1,5 @@
 // router.js
-import page from './node_modules/page/page.mjs';
+//import page from './node_modules/page/page.mjs';
 
 // Function to load only the body from the external HTML file
 function loadBody(file, onLoaded) {
