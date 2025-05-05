@@ -1,5 +1,6 @@
 // router.js
 //import page from './node_modules/page/page.mjs';
+const URL_SITE = '/app_prototipo/'
 
 // Function to load only the body from the external HTML file
 function loadBody(file, onLoaded) {
@@ -33,17 +34,17 @@ page('*', (ctx, next) => {
 });
 
 // Define routes
-page('/', () => {
+page(''+URL_SITE+'/', () => {
   if (isLoggedIn()) {
-    loadBody('./pages/home.html', renderFormEntries);  // Load home.html's body content
+    loadBody('.'+URL_SITE+'/pages/home.html', renderFormEntries);  // Load home.html's body content
   }
   else {
-    loadBody('./pages/login.html');  // Load login.html's body content
+    loadBody('.'+URL_SITE+'/pages/login.html');  // Load login.html's body content
   }
 });
 
-page('/alta', () => {
-  loadBody('./pages/alta.html');  // Load alta.html's body content
+page(''+URL_SITE+'/alta', () => {
+  loadBody('.'+URL_SITE+'/pages/alta.html');  // Load alta.html's body content
 });
 
 // Start routing
