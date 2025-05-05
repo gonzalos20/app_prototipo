@@ -4,6 +4,7 @@ const URL_SITE = 'https://gonzalos20.github.io/app_prototipo'
 
 // Function to load only the body from the external HTML file
 function loadBody(file, onLoaded) {
+  console.log('Loading body from:', file);
   return fetch(file)
     .then(response => response.text())
     .then(html => {
@@ -36,7 +37,7 @@ page('*', (ctx, next) => {
 // Define routes
 page(URL_SITE+'/', () => {
   if (isLoggedIn()) {
-    loadBody(URL_SITE+'/pages/home.html', renderFormEntries);  // Load home.html's body content
+    loadBody('./pages/home.html', renderFormEntries);  // Load home.html's body content
   }
   else {
     loadBody('./pages/login.html');  // Load login.html's body content
