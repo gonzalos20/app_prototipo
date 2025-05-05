@@ -26,7 +26,6 @@ function loadBody(file, onLoaded) {
 
 // Apply the authentication middleware for all routes except '/login'
 page('*', (ctx, next) => {
-  console.log('Current path:', ctx.pathname);
   if (ctx.pathname !== '/app_prototipo/' && !isLoggedIn()) {
     page.redirect(URL_SITE+'/');  // Redirect to login if not logged in
   } else {
@@ -36,6 +35,7 @@ page('*', (ctx, next) => {
 
 // Define routes
 page(URL_SITE+'/', () => {
+  console.log('Loading home page...');
   if (isLoggedIn()) {
     loadBody('./pages/home.html', renderFormEntries);  // Load home.html's body content
   }
