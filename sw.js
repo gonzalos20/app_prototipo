@@ -1,7 +1,7 @@
-const CACHE_NAME = 'iWorkflow-v1';
+const CACHE_NAME = 'iWorkflow';
 const APP_NAME = 'app_prototipo'
-const urlsToCache = ['/'+APP_NAME+'/', '/'+APP_NAME+'/index.html', '/'+APP_NAME+'/styles.css', '/'+APP_NAME+'/app.js', '/'+APP_NAME+'/manifest.json',   '/'+APP_NAME+'/icons/icon-192.png',
-  '/'+APP_NAME+'/icons/icon-512.png', 'https://cdn.jsdelivr.net/npm/daisyui@5', 'https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4', 'https://cdnjs.cloudflare.com/ajax/libs/page.js/1.10.2/page.js', '/'+APP_NAME+'/router.js'];
+const urlsToCache = ['./', './index.html', './styles.css', './app.js', './manifest.json',   './icons/icon-192.png',
+  './icons/icon-512.png', 'https://cdn.jsdelivr.net/npm/daisyui@5', 'https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4', 'https://cdnjs.cloudflare.com/ajax/libs/page.js/1.10.2/page.js', './router.js', './pages/home.html', './pages/alta.html', './pages/login.html', './middleware/authMiddleware.js'];
 
   self.addEventListener('install', (event) => {
     event.waitUntil(

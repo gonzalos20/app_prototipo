@@ -1,7 +1,7 @@
 {
   "name": "iWeb iWorkflow",
-  "short_name": "Notes",
-  "start_url": "./index.html",
+  "short_name": "iWorkflow",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",

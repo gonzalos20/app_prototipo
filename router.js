@@ -1,6 +1,5 @@
 // router.js
 //import page from './node_modules/page/page.mjs';
-const URL_SITE = 'https://gonzalos20.github.io/app_prototipo'
 
 // Function to load only the body from the external HTML file
 function loadBody(file, onLoaded) {
@@ -26,16 +25,15 @@ function loadBody(file, onLoaded) {
 
 // Apply the authentication middleware for all routes except '/login'
 page('*', (ctx, next) => {
-  if (ctx.pathname !== '/app_prototipo/' && !isLoggedIn()) {
-    page.redirect(URL_SITE+'/');  // Redirect to login if not logged in
+  if (ctx.pathname !== '/' && !isLoggedIn()) {
+    page.redirect('/');  // Redirect to login if not logged in
   } else {
     next();  // Allow the route to proceed if logged in or it's the login page
   }
 });
 
 // Define routes
-page(URL_SITE+'/', () => {
-  console.log('Loading home page...');
+page('/', () => {
   if (isLoggedIn()) {
     loadBody('./pages/home.html', renderFormEntries);  // Load home.html's body content
   }
@@ -44,7 +42,7 @@ page(URL_SITE+'/', () => {
   }
 });
 
-page(''+URL_SITE+'/alta', () => {
+page('/alta', () => {
   loadBody('./pages/alta.html');  // Load alta.html's body content
 });
 
